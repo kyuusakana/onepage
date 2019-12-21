@@ -1,4 +1,4 @@
-define(['vue','app','aztitle'],function(Vue,app,aztitle){
+define(['vue','app','fn','aztitle'],function(Vue,app,fn,aztitle){
 	app.vue.prop.component='button-counter';
 	Vue.component("button-counter", {
 	  data: function() {
@@ -21,8 +21,7 @@ define(['vue','app','aztitle'],function(Vue,app,aztitle){
 		},
 		methods:{
 			tob(){
-				require.undef('b');
-				require(['b']);
+				fn.topage('b');
 			},
 		},
 	});
